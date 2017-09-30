@@ -2,7 +2,7 @@ import React from 'react'
 import { Text } from 'react-native'
 
 const MapScreen = (props) => {
-    return(
+    return (
         <Text>
             {props.children}
             MapScreen

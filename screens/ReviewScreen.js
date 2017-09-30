@@ -1,11 +1,15 @@
 import React from 'react'
-import { Text } from 'react-native'
-import { Button } from 'react-native-elements'
+import { Text, Button } from 'react-native'
 
 export default class ReviewScreen extends React.Component {
     static navigationOptions = ({ navigation }) => ({
         title: 'Review Jobs',
-        headerRight: <Button title='Go Right' onPress={() => {}} />
+        headerRight: (
+            <Button 
+                title='Settings' 
+                onPress={() => navigation.navigate('settings')} 
+            />
+        )
     })
     render() {
         return (

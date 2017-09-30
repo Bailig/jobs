@@ -2,7 +2,7 @@ import React from 'react'
 import { Text } from 'react-native'
 
 const DeckScreen = (props) => {
-    return(
+    return (
         <Text>
             {props.children}
             DeckScreen
