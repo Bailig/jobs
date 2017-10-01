@@ -12,7 +12,7 @@ const SLIDE_DATA = [
 
 class WelcomeScreen extends Component {
     componentWillMount() {
-        if (!this.props.auth.attemptedFacebookLogin) {
+        if (!this.props.welcome.attemptedFacebookLogin) {
             this.props.attemptFacebookLogin()
         }
     }
@@ -32,7 +32,7 @@ class WelcomeScreen extends Component {
     }
 
     render() {
-        if (!this.props.auth.attemptedFacebookLogin) {
+        if (!this.props.welcome.attemptedFacebookLogin) {
             return <AppLoading />
         }
         return (
@@ -46,7 +46,7 @@ class WelcomeScreen extends Component {
     }
 }
 
-const mapStateToProps = ({ auth }) => {
-    return { auth }
+const mapStateToProps = ({ auth, welcome }) => {
+    return { auth, welcome }
 }
 export default connect(mapStateToProps, actions)(WelcomeScreen)
