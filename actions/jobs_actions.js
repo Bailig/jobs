@@ -7,7 +7,7 @@ import T from './types'
 const JOB_ROOT_URL = 'http://api.indeed.com/ads/apisearch?'
 
 const JOB_QUERY_PARAMS = {
-    publisher: '420173880381 6157',
+    publisher: '4201738803816157',
     format: 'json',
     v: '2',
     latlong: 1,
@@ -30,4 +30,12 @@ export const fetchJobs = (region, callback) => async (dispatch) => {
     } catch (error) {
         console.log(error)
     }
+}
+
+export const likeJob = (job) => {
+    return { type: T.JOB_LIKE, payload: job }
+}
+
+export const clearLikes = () => {
+    return { type: T.JOB_LIKED_CLEAR }
 }
